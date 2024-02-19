@@ -1,0 +1,38 @@
+GET localhost:3000
+
+###
+
+GET localhost:3000/users
+
+###
+
+GET localhost:3000/users/aa
+
+###
+
+GET localhost:3000/users?role=ADMIN
+
+###
+
+POST localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "mehrdad",
+  "email": "mehrdad.kian71@gmail.com",
+  "role": "ADMIN"
+}
+
+###
+
+PATCH localhost:3000/users/6
+Content-Type: application/json
+
+{
+  "name": "mehrad",
+  "role": "ENGINNER"
+}
+
+###
+
+DELETE localhost:3000/users/6
