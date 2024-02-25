@@ -1,12 +1,24 @@
-import {Controller, Get, Post, Body, Patch, Param, Delete, Query} from '@nestjs/common';
-import { EmployeesService } from './employees.service';
-import {Prisma} from "@prisma/client";
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  Query,
+  Ip,
+} from "@nestjs/common";
+import { EmployeesService } from "./employees.service";
+import { Prisma } from "@prisma/client";
+import { MyLoggerService } from "../my-logger/my-logger.service";
 // import { CreateEmployeeDto } from './dto/create-employee.dto';
 // import { UpdateEmployeeDto } from './dto/update-employee.dto';
 
-@Controller('employees')
+@Controller("employees")
 export class EmployeesController {
   constructor(private readonly employeesService: EmployeesService) {}
+  private readonly logger = new MyLoggerService(EmployeesController.name);
 
   @Post()
   create(@Body() createEmployeeDto: Prisma.EmployeeCreateInput) {
@@ -14,22 +26,32 @@ export class EmployeesController {
   }
 
   @Get()
-  findAll(@Query('role') role?: 'INTERN' | 'ENGINEER' | 'ADMIN') {
+  findAll(
+    @Ip() ip: string,
+    @Query("role") role?: "INTERN" | "ENGINEER" | "ADMIN",
+  ) {
+    this.logger.log(
+      `Request for All Employees\t${ip}`,
+      EmployeesController.name,
+    );
     return this.employeesService.findAll(role);
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
+  @Get(":id")
+  findOne(@Param("id") id: string) {
     return this.employeesService.findOne(+id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateEmployeeDto: Prisma.EmployeeUpdateInput) {
+  @Patch(":id")
+  update(
+    @Param("id") id: string,
+    @Body() updateEmployeeDto: Prisma.EmployeeUpdateInput,
+  ) {
     return this.employeesService.update(+id, updateEmployeeDto);
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
+  @Delete(":id")
+  remove(@Param("id") id: string) {
     return this.employeesService.remove(+id);
   }
 }

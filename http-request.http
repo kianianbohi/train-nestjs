@@ -2,7 +2,7 @@ GET localhost:3000
 
 ###
 
-GET localhost:3000/api/ users?role='ADMIN'
+GET localhost:3000/api/  users?role='ADMIN'
 
 ###
 

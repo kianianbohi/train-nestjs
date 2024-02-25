@@ -1,0 +1,37 @@
+2/25/24, 12:50 PM	InstanceLoader	DatabaseModule dependencies initialized
+2/25/24, 12:50 PM	InstanceLoader	MyLoggerModule dependencies initialized
+2/25/24, 12:50 PM	InstanceLoader	EmployeesModule dependencies initialized
+2/25/24, 12:50 PM	InstanceLoader	ThrottlerModule dependencies initialized
+2/25/24, 12:50 PM	InstanceLoader	UsersModule dependencies initialized
+2/25/24, 12:50 PM	InstanceLoader	AppModule dependencies initialized
+2/25/24, 12:50 PM	RoutesResolver	AppController {/api}:
+2/25/24, 12:50 PM	RouterExplorer	Mapped {/api, GET} route
+2/25/24, 12:50 PM	RoutesResolver	UsersController {/api/users}:
+2/25/24, 12:50 PM	RouterExplorer	Mapped {/api/users, GET} route
+2/25/24, 12:50 PM	RouterExplorer	Mapped {/api/users/:id, GET} route
+2/25/24, 12:50 PM	RouterExplorer	Mapped {/api/users/interns, GET} route
+2/25/24, 12:50 PM	RouterExplorer	Mapped {/api/users, POST} route
+2/25/24, 12:50 PM	RouterExplorer	Mapped {/api/users/:id, PATCH} route
+2/25/24, 12:50 PM	RouterExplorer	Mapped {/api/users/:id, DELETE} route
+2/25/24, 12:50 PM	RoutesResolver	EmployeesController {/api/employees}:
+2/25/24, 12:50 PM	RouterExplorer	Mapped {/api/employees, POST} route
+2/25/24, 12:50 PM	RouterExplorer	Mapped {/api/employees, GET} route
+2/25/24, 12:50 PM	RouterExplorer	Mapped {/api/employees/:id, GET} route
+2/25/24, 12:50 PM	RouterExplorer	Mapped {/api/employees/:id, PATCH} route
+2/25/24, 12:50 PM	RouterExplorer	Mapped {/api/employees/:id, DELETE} route
+2/25/24, 12:50 PM	NestApplication	Nest application successfully started
+2/25/24, 12:50 PM	NestFactory	Starting Nest application...
+2/25/24, 1:07 PM	undefined	Request for All Employees	::ffff:127.0.0.1
+2/25/24, 1:07 PM	undefined	Request for All Employees	::ffff:127.0.0.1
+2/25/24, 1:07 PM	undefined	Request for All Employees	::ffff:127.0.0.1
+2/25/24, 1:07 PM	undefined	Request for All Employees	::ffff:127.0.0.1
+2/25/24, 1:07 PM	undefined	Request for All Employees	::ffff:127.0.0.1
+2/25/24, 1:07 PM	undefined	Request for All Employees	::ffff:127.0.0.1
+2/25/24, 1:07 PM	undefined	Request for All Employees	::ffff:127.0.0.1
+2/25/24, 1:07 PM	undefined	Request for All Employees	::ffff:127.0.0.1
+2/25/24, 1:07 PM	undefined	Request for All Employees	::ffff:127.0.0.1
+2/25/24, 1:08 PM	undefined	Request for All Employees	::ffff:127.0.0.1
+2/25/24, 1:08 PM	AllExceptionsFilter	Internal Server Error
+2/25/24, 1:08 PM	undefined	Request for All Employees	::ffff:127.0.0.1
+2/25/24, 1:08 PM	AllExceptionsFilter	ThrottlerException: Too Many Requests
+2/25/24, 1:08 PM	AllExceptionsFilter	ThrottlerException: Too Many Requests
