@@ -2,7 +2,7 @@ GET localhost:3000
 
 ###
 
-GET localhost:3000/users?role='dasdasd'
+GET localhost:3000/api/ users?role='ADMIN'
 
 ###
 
@@ -35,3 +35,39 @@ Content-Type: application/json
 ###
 
 DELETE localhost:3000/users/6
+
+###########################################################################
+
+GET localhost:3000/api/employees
+
+###
+
+GET localhost:3000/api/employees/2
+
+###
+
+GET localhost:3000/api/employees?role=ADMIN
+
+###
+
+POST localhost:3000/api/employees
+Content-Type: application/json
+
+{
+  "name": "fear",
+  "email": "fear@gmail.com",
+  "role": "INTERN"
+}
+
+###
+
+PATCH localhost:3000/api/employees/2
+Content-Type: application/json
+
+{
+  "email": "lesco "
+}
+
+###
+
+DELETE localhost:3000/api/employees/2
